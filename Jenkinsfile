@@ -11,7 +11,7 @@ pipeline
           {
             Checkout()   //  checkout
             NginxDeployment() //  deployment
-      }
+          }
     else if ("${Branch_Name}" == 'syst')
            {
               Checkout()   //  cloning 
@@ -38,7 +38,7 @@ def Checkout()
      } 
 }
              
- def NginxDeployment() {       
+def NginxDeployment() {       
         stage ('NginxDeployment')
         {
            steps {
