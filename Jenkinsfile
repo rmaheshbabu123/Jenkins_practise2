@@ -9,9 +9,18 @@ pipeline
 
    if ("${Branch_Name}" == 'dev')  
           {
-            Checkout()   //  cloning 
-            NginxDeployment() // for k8s deployment
+            Checkout()   //  checkout
+            NginxDeployment() //  deployment
       }
+    else if ("${Branch_Name}" == 'syst')
+           {
+              Checkout()   //  cloning 
+              NginxDeployment() //  deployment
+            }
+    else if ("${Branch_Name}" == 'master') {
+              Checkout()   //  cloning 
+              NginxDeployment() // deployment
+        }
 } 
 
 def Checkout()   
@@ -40,4 +49,4 @@ def Checkout()
                  } 
         }
     }
-}
+
