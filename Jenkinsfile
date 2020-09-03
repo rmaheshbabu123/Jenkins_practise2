@@ -5,6 +5,7 @@ pipeline
          } 
      parameters 
            choice(choices: 'dev\nsyst\nmaster', description: 'Enter Branch Name ' , name: 'Branch_Name')    
+    }
      stages 
     {
        stage ('Checkout') 
@@ -26,4 +27,4 @@ pipeline
                  } 
         }
     }
-}
+
