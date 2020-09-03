@@ -1,3 +1,8 @@
+  
+import groovy.json.JsonOutput
+import groovy.transform.Field
+import groovy.json.JsonSlurper
+
 pipeline 
 {   
    agent {
