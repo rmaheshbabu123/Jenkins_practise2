@@ -3,11 +3,8 @@ import groovy.json.JsonOutput
 import groovy.transform.Field
 import groovy.json.JsonSlurper
 
-pipeline 
-{   
-   agent {
-     label 'Build-Nginix'
-         } 
+node ('Build-Nginix') 
+{
    parameters {
            choice(choices: 'dev\nsyst\nmaster', description: 'Enter Branch Name ' , name: 'Branch_Name')    
     }
@@ -30,8 +27,7 @@ pipeline
 
 def Checkout()   
 { 
-     stages 
-    {
+ 
        stage ('Checkout') 
           {
            steps {
@@ -40,7 +36,7 @@ def Checkout()
                                    }
                  }
           }
-     } 
+  
 }
              
 def NginxDeployment() {       
@@ -54,4 +50,4 @@ def NginxDeployment() {
                  } 
         }
     }
-
+}
