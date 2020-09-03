@@ -14,15 +14,6 @@ node ('Build-Nginix')
             Checkout()   //  checkout
             NginxDeployment() //  deployment
           }
-    else if ("${Branch_Name}" == 'syst')
-           {
-              Checkout()   //  cloning 
-              NginxDeployment() //  deployment
-            }
-    else if ("${Branch_Name}" == 'master') {
-              Checkout()   //  cloning 
-              NginxDeployment() // deployment
-        }
 } 
 
 def Checkout()   
