@@ -36,7 +36,7 @@ def NginxDeployment() {
            
               node ('Build-Nginix')
                    {
-                sh 'sudo cp /home/ubuntu/workspace/MyPipelinejob2/* /var/www/html/ '             
+                sh 'sudo cp /home/ubuntu/workspace/MyPipelinejob2@2/* /var/www/html/ '             
                    }
                   
         }
